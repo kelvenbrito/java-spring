@@ -20,7 +20,7 @@ public class indexController {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public ModelAndView nomeIndex(@RequestParam("nome") String nome, String end, String date) {
+    public ModelAndView nomeIndex(@RequestParam("nome") String nome,@RequestParam("end") String end,@RequestParam("date") String date) {
         ModelAndView mv = new ModelAndView("index");
 
         String mensagem = "Seja bem-vinda(o)! !";
