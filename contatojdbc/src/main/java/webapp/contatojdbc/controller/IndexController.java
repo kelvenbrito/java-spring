@@ -1,34 +1,33 @@
-package webapp.hello_world.Controller;
+
+package webapp.contatojdbc.controller;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-/** @author Rolfi Luz - Senai * */
+import webapp.contatojdbc.connection.EmailDAO;
+
 @Controller
-public class indexController {
+public class IndexController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView abrirIndex() {
         ModelAndView mv = new ModelAndView("index");
-
-        String mensagem = "Seja bem-vinda(o)!";
+        String mensagem = "Olá, seja bem-vinda(o)!";
         mv.addObject("msg", mensagem);
+        new EmailDAO().criaTabela();
 
         return mv;
     }
 
+
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public ModelAndView abrirIndex(@RequestParam("nome") String nome,@RequestParam("email") String email,@RequestParam("tel") String tel) {
+    public ModelAndView buscarIndex(@RequestParam("email") String email) {
         ModelAndView mv = new ModelAndView("index");
 
-        String mensagem = "Seja bem-vinda(o)! !";
-        mv.addObject("msg", mensagem);
-        mv.addObject("nome", nome);
-        mv.addObject("email", email);
-        mv.addObject("tel", tel);
-
+        new EmailDAO().cadastrar(email);
 
         return mv;
     }
