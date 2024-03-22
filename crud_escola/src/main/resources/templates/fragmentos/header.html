@@ -1,30 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br" xmlns="http://thymeleaf.org/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal Escolar</title>
+<header>
+    <h1>Escola XYZ</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+        <div class="acesso">
+            <a href="#"><i class="fas fa-user-graduate"></i> Alunos</a>
+            <a href="#"><i class="fas fa-chalkboard-teacher"></i> Professores</a>
+            <a href="/login-adm"><i class="fas fa-user-tie"></i> Administradores</a>
+        </div>
 
-</head>
-
-<body>
-    <div class="container">
-        <div th:insert="~{fragmentos/header :: header}"><!-- barra de menu -->...</div>
-    </div>
-    <header>
-        <h1>Site de Acesso</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Alunos</a></li>
-                <li><a href="#">Professores</a></li>
-                <li><a href="#">Administradores</a></li>
-              
-            </ul>
-          
-        </nav>
-    </header>
-</body>
-
-</html>
+    </nav>
+</header>
