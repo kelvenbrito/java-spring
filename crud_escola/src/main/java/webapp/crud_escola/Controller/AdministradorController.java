@@ -29,5 +29,4 @@ public class AdministradorController {
         return "adm/login-adm";
     }
     
-    
 }

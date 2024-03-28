@@ -27,6 +27,7 @@ public class IndexController {
     public ModelAndView abrirCadAdm() {
         ModelAndView mv = new ModelAndView("adm/cad-adm");
         return mv;
+    
     }
 
 }
