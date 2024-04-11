@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="pt-br" xmlns:th="http://thymeleaf.org/">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +14,9 @@
 </head>
 <body>
     <div th:insert="~{fragmentos/header :: header}"><!-- barra de menu --></div>
-
+    <span th:class="${classe}" th:text="${msg}"></span>
     <a href="/cadastro-aluno"><button type="button" class="btn btn-block btn-login"><i class="fas fa-sign-in-alt"></i>Cadastrar ALuno</button></a>
     <a href="/cadastro-professor"><button type="button" class="btn btn-block btn-login"><i class="fas fa-sign-in-alt"></i>Cadastrar Professor</button></a>
-
+   <form action="logout-adm" method="post"><button type="submit" class="btn btn-block btn-login"><i class="fas fa-sign-out-alt"></i> Logout</button></form> 
 </body>
 </html>
