@@ -12,12 +12,24 @@
 </head>
 <body>
     <div th:insert="~{fragmentos/header :: header}"><!-- barra de menu --></div>
-    <form id="formProfessor">
+    <form id="formaluno"  action="cadastrar-aluno" method="post">
         <h1>Cadastro ALuno</h1>
+        <label for="cpf">RA:</label>
+        <input type="text" name="ra" required>
+        <label for="rg">RG:</label>
+        <input type="text" name="rg" required>
         <label for="nome">Nome do Aluno:</label>
-        <input type="text" id="nome" required>
-        <label for="disciplina">Disciplina:</label>
-        <input type="text" id="disciplina" required>
+        <input type="text" name="nome" required>
+        <label for="email">Email:</label>
+        <input type="text" name="email" required>
+        <label for="materia">Materia:</label>
+        <input type="text" name="materia" required>
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone" required>
+        <label for="responsavel">Responsavel:</label>
+        <input type="text" name="Responsavel" required>
+        <label for="senha">Senha:</label>
+        <input type="text" name="senha" required>
         <button type="submit">Adicionar Aluno</button>
     </form>
 
