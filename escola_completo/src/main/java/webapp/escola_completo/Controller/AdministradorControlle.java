@@ -154,15 +154,14 @@ public class AdministradorControlle {
 
         return mv;
     }
+
+
     @PostMapping("listar-alunos")
-    public ModelAndView listarAlunos(RedirectAttributes attributes) {
-        ModelAndView mv = new ModelAndView("interna-adm/lista-aluno");
-        Iterable<Aluno> alunos = alr.findAll(); // Busca todos os alunos do banco de dados
-        for (Aluno aluno : alunos) {
-            System.out.println(aluno); // Adicione esta linha para verificar os dados de cada aluno
-        }
-       
-        return mv;
-    }
+public ModelAndView listarAlunos(RedirectAttributes attributes) {
+    ModelAndView mv = new ModelAndView("interna-adm/lista-aluno");
+    Iterable<Aluno> alunos = alr.findAll(); // Busca todos os alunos do banco de dados
+    mv.addObject("alunos", alunos); // Adiciona a lista de alunos ao modelo
+    return mv;
+}
     
 }
