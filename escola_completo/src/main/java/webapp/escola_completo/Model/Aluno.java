@@ -14,10 +14,10 @@ public class Aluno implements Serializable {
      private String nome;
      private String email;
      private String materias;
+     private String turma;
      private String telefone;
      private String responsavel;
      private String senha;
-
     //Métodos
     public String getRa() {
         return ra;
@@ -49,11 +49,11 @@ public class Aluno implements Serializable {
     public void setMaterias(String materias) {
         this.materias = materias;
     }
-    public String getSenha() {
-        return senha;
+    public String getTurma() {
+        return turma;
     }
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setTurma(String turma) {
+        this.turma = turma;
     }
     public String getTelefone() {
         return telefone;
@@ -67,4 +67,12 @@ public class Aluno implements Serializable {
     public void setResponsavel(String responsavel) {
         this.responsavel = responsavel;
     }
+    public String getSenha() {
+        return senha;
+    }
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    
+  
 }

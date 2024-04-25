@@ -33,6 +33,8 @@ public class AdministradorControlle {
     @Autowired
     private AlunoRepository alr;
 
+
+
     @PostMapping("cadastrar-adm")
     public ModelAndView cadastroAdmBD(Administrador adm) {
         boolean verificaCpf = vcar.existsById(adm.getCpf());
@@ -161,6 +163,14 @@ public ModelAndView listarAlunos(RedirectAttributes attributes) {
     ModelAndView mv = new ModelAndView("interna-adm/lista-aluno");
     Iterable<Aluno> alunos = alr.findAll(); // Busca todos os alunos do banco de dados
     mv.addObject("alunos", alunos); // Adiciona a lista de alunos ao modelo
+    return mv;
+}
+
+@PostMapping("listar-professores")
+public ModelAndView listarProfessores(RedirectAttributes attributes) {
+    ModelAndView mv = new ModelAndView("interna-adm/lista-professor");
+    Iterable<Professor> professores = pr.findAll(); // Busca todos os alunos do banco de dados
+    mv.addObject("professores", professores); // Adiciona a lista de professores ao modelo
     return mv;
 }
     

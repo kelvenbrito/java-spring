@@ -19,6 +19,8 @@ public class IndexController {
     public String acessoHomePage2() {
         return "index";
     }
+
+    //Acesso ADM
     @GetMapping("/login-adm")
     public String acessoLoginAdm() {
         return "login/login-adm";
@@ -40,8 +42,19 @@ public class IndexController {
         return "interna-adm/cadastro-aluno";
     }
     
+
+    //Acesso Aluno
+    @GetMapping("/login-aluno")
+    public String acessoLoginAluno() {
+        return "login/login-aluno";
+    }
     
-        
+         //Acesso Professor
+    @GetMapping("/login-professor")
+    public String acessoLoginProfessor() {
+        return "login/login-professor";
+    }
+    
 
     
 }

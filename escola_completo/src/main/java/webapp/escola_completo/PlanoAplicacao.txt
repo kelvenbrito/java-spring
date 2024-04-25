@@ -1,0 +1,33 @@
+-Pagina Inicial
+
+
+- Pagina Login ADM
+    - (CPF/senha)
+    - Acessar (verificação do usuario) 
+        - Página interna
+            -Página de Cadastro do aluno
+            -Página de Cadastro do professor
+            -Lista de Alunos 
+            -Lista de Professores
+    - Cadastrar => Página de Cadastro ADM
+
+- Pagina Login Aluno
+    - (RA / Senha) 
+    - Acessar (verificação do usuario) 
+      - Página interna
+      - Lista de Materias 
+        - Consulta Notas
+        - Consulta Faltas
+- Pagina Login Professor
+    - (CPF / Senha) 
+    - Acessar (verificação do usuario) 
+      - Página interna
+      - Lista de Materias 
+      - Lista de turmas
+        - Inserir Notas
+        - Inserir Faltas
+    
+   
+-Página de Cadastro
+    -formulário(nome/email/senha)SQL
+    -Cadastrar (verificar e-mail(unico), campos preenchidos) => tela login()

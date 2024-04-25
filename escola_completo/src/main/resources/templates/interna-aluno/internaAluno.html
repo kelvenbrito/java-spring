@@ -15,10 +15,7 @@
 <body>
     <div th:insert="~{fragmentos/header :: header}"><!-- barra de menu --></div>
     <span th:class="${classe}" th:text="${msg}"></span>
-    <a href="/cadastro-aluno"><button type="button" class="btn btn-block btn-login"><i class="fas fa-sign-in-alt"></i>Cadastrar ALuno</button></a>
-    <a href="/cadastro-professor"><button type="button" class="btn btn-block btn-login"><i class="fas fa-sign-in-alt"></i>Cadastrar Professor</button></a>
-    <form action="listar-alunos" method="post"><button type="submit" class="btn btn-block btn-login"><i class="fas fa-sign-in-alt"></i>Lista de alunos</button></form>
-    <form action="listar-professores" method="post"><button type="submit" class="btn btn-block btn-login"><i class="fas fa-sign-in-alt"></i>Lista de professores</button></form>
+    <form action="listar-materias" method="post"><button type="submit" class="btn btn-block btn-login"><i class="fas fa-sign-in-alt"></i>Materias</button></form>
    <form action="logout-adm" method="post"><button type="submit" class="btn btn-block btn-login"><i class="fas fa-sign-out-alt"></i> Logout</button></form> 
 </body>
 </html>
