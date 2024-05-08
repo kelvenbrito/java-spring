@@ -8,9 +8,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import webapp.escola_completo.Model.Administrador;
 import webapp.escola_completo.Model.Aluno;
+import webapp.escola_completo.Model.Materias;
 import webapp.escola_completo.Model.Professor;
 import webapp.escola_completo.Repository.AdministradorRepository;
 import webapp.escola_completo.Repository.AlunoRepository;
+import webapp.escola_completo.Repository.MateriaRepository;
 import webapp.escola_completo.Repository.ProfessorRepository;
 import webapp.escola_completo.Repository.VerificaCadastroAdmRepository;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,6 +34,9 @@ public class AdministradorControlle {
 
     @Autowired
     private AlunoRepository alr;
+
+    @Autowired
+    private MateriaRepository mr;
 
 
 
@@ -158,6 +163,25 @@ public class AdministradorControlle {
     }
 
 
+    @PostMapping("cadastrar-materia")
+    public ModelAndView acessoPageInternaAdmMateria(Materias materia, RedirectAttributes attributes) {
+        ModelAndView mv = new ModelAndView("interna-adm/cadastro-aluno");
+        if (acessoInternoAdm) {
+            mr.save(materia);
+            String mensagem = "Cadastro realizado com sucesso!";
+            System.out.println(mensagem);
+            mv.addObject("msg", mensagem);
+            mv.addObject("classe", "verde");
+        } else {
+            String mensagem = "Falha no cadastro";
+            System.out.println(mensagem);
+            attributes.addFlashAttribute("msg", mensagem);
+            attributes.addFlashAttribute("classe", "vermelho");
+        }
+
+        return mv;
+    }
+    
     @PostMapping("listar-alunos")
 public ModelAndView listarAlunos(RedirectAttributes attributes) {
     ModelAndView mv = new ModelAndView("interna-adm/lista-aluno");

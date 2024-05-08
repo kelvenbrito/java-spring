@@ -2,12 +2,12 @@ package webapp.escola_completo.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-public class IndexController {
+public class indexController {
     //classe para criação das rotas de navegação
 
     @GetMapping("/home")
@@ -40,6 +40,12 @@ public class IndexController {
     @GetMapping("/cadastro-aluno")
     public String acessoCadastroaluno() {
         return "interna-adm/cadastro-aluno";
+    }
+
+      
+    @GetMapping("/cadastro-materia")
+    public String acessoCadastromateria() {
+        return "interna-adm/cadastro-materia";
     }
     
 

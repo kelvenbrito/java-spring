@@ -18,21 +18,24 @@
         <thead>
             <tr>
                 <th>RA</th>
+                <th>RG</th>
                 <th>Nome</th>
+                <th>Turma</th>
                 <th>Telefone</th>
                 <th>Email</th>
-                <th>Responsáveis</th>
-                <th>Notas</th>
-                <th>Faltas</th>
+                <th>Media</th>
+                <th>Precensa %</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="aluno : ${alunos}">
                 <td th:text="${aluno.ra}"></td>
+                <td th:text="${aluno.rg}"></td>
                 <td th:text="${aluno.nome}"></td>
+                <td th:text="${aluno.turma}"></td>
                 <td th:text="${aluno.telefone}"></td>
                 <td th:text="${aluno.email}"></td>
-                <td th:text="${aluno.responsavel}"></td>
+               
             </tr>
         </tbody>
     </table>

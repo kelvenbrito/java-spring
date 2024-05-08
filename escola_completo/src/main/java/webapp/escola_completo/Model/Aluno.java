@@ -13,7 +13,6 @@ public class Aluno implements Serializable {
      private String rg;
      private String nome;
      private String email;
-     private String materias;
      private String turma;
      private String telefone;
      private String responsavel;
@@ -43,12 +42,7 @@ public class Aluno implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    public String getMaterias() {
-        return materias;
-    }
-    public void setMaterias(String materias) {
-        this.materias = materias;
-    }
+ 
     public String getTurma() {
         return turma;
     }
