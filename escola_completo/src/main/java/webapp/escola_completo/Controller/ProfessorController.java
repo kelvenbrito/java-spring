@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import webapp.escola_completo.Model.Aluno;
 import webapp.escola_completo.Model.Professor;
-import webapp.escola_completo.Repository.AlunoRepository;
 import webapp.escola_completo.Repository.ProfessorRepository;
 
 @Controller

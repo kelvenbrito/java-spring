@@ -1,3 +1,5 @@
+CREATE DATABASE Escola;
+
 
 CREATE TABLE Verifica_cadastro_adm(
     Cpf INT PRIMARY KEY,
