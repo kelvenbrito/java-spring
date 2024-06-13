@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Responsável</title>
+</head>
+
+<body>
+    <h2>Editar Responsável</h2>
+    <form th:action="@{'/responsavel/' + ${responsavel.id}}" method="post">
+        <input type="hidden" name="_method" value="put">
+        <div class="form-group">
+            <label for="idResponsavel">ID:</label>
+            <input type="text" id="idResponsavel" name="idResponsavel" th:value="${responsavel.id}" required>
+        </div>
+        <div class="form-group">
+            <label for="nomeResponsavel">Nome:</label>
+            <input type="text" id="nomeResponsavel" name="nomeResponsavel" th:value="${responsavel.nome}" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Salvar Alterações">
+        </div>
+    </form>
+</body>
+
+</html>

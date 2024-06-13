@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Ambiente</title>
+</head>
+
+<body>
+    <h2>Editar Ambiente</h2>
+    <form th:action="@{'/ambiente/' + ${ambiente.id}}" method="post">
+        <input type="hidden" name="_method" value="put">
+        <div class="form-group">
+            <label for="idAmbiente">ID:</label>
+            <input type="text" id="idAmbiente" name="idAmbiente" th:value="${ambiente.id}" required>
+        </div>
+        <div class="form-group">
+            <label for="nomeAmbiente">Nome:</label>
+            <input type="text" id="nomeAmbiente" name="nomeAmbiente" th:value="${ambiente.nome}" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Salvar Alterações">
+        </div>
+    </form>
+</body>
+
+</html>
