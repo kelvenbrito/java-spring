@@ -9,7 +9,7 @@
 
 <body>
     <h2>Editar Responsável</h2>
-    <form th:action="@{'/responsavel/' + ${responsavel.id}}" method="post">
+    <form th:action="@{'/responsavel/' + ${responsavel.id}}" method="put">
         <input type="hidden" name="_method" value="put">
         <div class="form-group">
             <label for="idResponsavel">ID:</label>

@@ -33,7 +33,7 @@
                 <td th:text="${responsavel.id}"></td>
                 <td th:text="${responsavel.nome}"></td>
                 <td>
-                    <form th:action="@{'/responsavel/editar/' + ${responsavel.id}}" method="post">
+                    <form th:action="@{'/responsavel/editar/' + ${responsavel.id}}" method="get">
                         <button type="submit" class="edit-btn">Editar</button>
                     </form>
                     <form th:action="@{'/responsavel/' + ${responsavel.id}}" method="post">

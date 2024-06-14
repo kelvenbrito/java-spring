@@ -60,23 +60,38 @@ public class ResponsavelController {
             System.out.println("Responsável não encontrado");
             return ResponseEntity.notFound().build();
         }
-    }
-    @PostMapping("/editar/{id}")
-    public ModelAndView editarResponsavel(@PathVariable Long id, RedirectAttributes attributes) {
-        ModelAndView mv = new ModelAndView("/editarResponsavel"); // página interna de acesso
-        Optional<Responsavel> responsavelOptional = repository.findById(id);
-        if (responsavelOptional.isPresent()) {
-            Responsavel responsavel = responsavelOptional.get();
-            mv.addObject("responsavel", responsavel); // Adicionando responsável ao ModelAndView
-            System.out.println("Responsável encontrado: " + responsavel);
-            mv.addObject("responsavelId", id); // Adicionando o ID ao ModelAndView
-        } else {
-            System.out.println("Responsável não encontrado, redirecionando para /admin");
-            mv.setViewName("redirect:/admin");
-        }
-        return mv;
-    }
+     }
+     @PostMapping("/editar/{id}")
+     public ModelAndView editarResponsavel(@PathVariable Long id, RedirectAttributes attributes) {
+         ModelAndView mv = new ModelAndView("/editarResponsavel"); // página interna de acesso
+         Optional<Responsavel> responsavelOptional = repository.findById(id);
+         if (responsavelOptional.isPresent()) {
+             Responsavel responsavel = responsavelOptional.get();
+             mv.addObject("responsavel", responsavel); // Adicionando responsável ao ModelAndView
+             System.out.println("Responsável encontrado: " + responsavel);
+             mv.addObject("responsavelId", id); // Adicionando o ID ao ModelAndView
+         } else {
+             System.out.println("Responsável não encontrado, redirecionando para /admin");
+             mv.setViewName("redirect:/admin");
+         }
+         return mv;
+     }
+     
     
+    @GetMapping("/editar/{id}")
+public ModelAndView exibirFormularioEdicao(@PathVariable Long id) {
+    ModelAndView mv = new ModelAndView("/editarResponsavel");
+    Optional<Responsavel> responsavelOptional = repository.findById(id);
+    if (responsavelOptional.isPresent()) {
+        Responsavel responsavel = responsavelOptional.get();
+        mv.addObject("responsavel", responsavel);
+        mv.addObject("responsavelId", id);
+    } else {
+        mv.setViewName("redirect:/admin");
+    }
+    return mv;
+}
+
     
     
     
