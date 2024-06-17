@@ -1,4 +1,4 @@
-package br.com.kelven.apirest_senai.Model;
+package com.matheus.api_final.Model;
 
 import java.io.Serializable;
 
@@ -8,18 +8,17 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.*;
 
+
 @Entity
 @Setter
 @Getter
-public class AtivoPatrimonial implements Serializable {
-    // atributos
+public class Ambiente implements Serializable {
+    //atributos
     @Id
     private Long id;
     private String nome;
-     @ManyToOne
-    @JoinColumn(name = "id_ambiente")
-    private Ambiente ambiente;
-
-   
+    @ManyToOne
+    @JoinColumn(name = "id_responsavel")
+    private Responsavel responsavel;
 
 }

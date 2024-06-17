@@ -1,8 +1,8 @@
-package br.com.kelven.apirest_senai.Repository;
+package com.matheus.api_final.Repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import br.com.kelven.apirest_senai.Model.Ambiente;
+import com.matheus.api_final.Model.Ambiente;
 
 
 

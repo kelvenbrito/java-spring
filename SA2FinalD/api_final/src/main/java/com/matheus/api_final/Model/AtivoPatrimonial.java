@@ -1,4 +1,4 @@
-package br.com.kelven.apirest_senai.Model;
+package com.matheus.api_final.Model;
 
 import java.io.Serializable;
 

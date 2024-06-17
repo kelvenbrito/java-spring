@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Ativo Patrimonial</title>
+</head>
+
+<body>
+    <h2>Editar Ativo Patrimonial</h2>
+    <form th:action="@{'/ativo/' + ${ativo.id}}" method="post">
+        <input type="hidden" name="_method" value="put">
+        <div class="form-group">
+            <label for="idAtivo">ID:</label>
+            <input type="text" id="idAtivo" name="idAtivo" th:value="${ativo.id}" required>
+        </div>
+        <div class="form-group">
+            <label for="nomeAtivo">Nome:</label>
+            <input type="text" id="nomeAtivo" name="nomeAtivo" th:value="${ativo.nome}" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Salvar Alterações">
+        </div>
+    </form>
+</body>
+
+</html>
